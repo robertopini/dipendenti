@@ -1,0 +1,9 @@
+  ID;nome;cognome;ruolo;dipartimento_ID;dataAss;salario
+  1;Sonia;Savastano;Manager;1;2008-12-24;60000
+  2;Andrea;Perrone;Manager;2;2007-10-02;80000
+  3;Giovanni;Rossi;Operaio;3;2003-05-11;30000
+  4;Mario;Bianchi;Operaio;3;2000-01-16;25000
+  5;Luca;Verdi;Dipendente;2;2001-03-01;40000
+  6;Rosa;Vello;Dipendente;1;2009-08-12;32000
+  
+  

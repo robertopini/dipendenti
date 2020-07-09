@@ -1,0 +1,17 @@
+
+
+POST http://localhost:4004/dip/Dipendenti?
+Content-Type: application/json;IEEE754Compatible=true
+
+{ 
+"ID":100, 
+"nome":"Roberto", 
+"cognome":"Pini",
+"ruolo":"Operaio",
+"dipartimento_ID":2,
+"dataAss": "2010-02-02",
+"salario": "15000"
+}
+
+
+
