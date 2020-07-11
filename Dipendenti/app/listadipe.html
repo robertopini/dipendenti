@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <title>Acme spa - Lista Dipendenti</title>
+  </head>
+  <body>
+    <div class = "container">
+    <h1>Dipendenti</h1>
+    <p> Ecco la lista dei nostri dipendenti </br>
+        <div id='app'>
+    <table id='dipendenti' class = table>
+        <thead>
+            <th> ID </th>
+            <th> Nome </th>
+            <th> Cognome </th>
+            <th> Ruolo </th>
+            <th> Salario </th>
+        </thead>
+        <tr v-for="dipendente in list" >
+            <td>{{ dipendente.ID }}</td>
+            <td>{{ dipendente.nome }}</td>
+            <td>{{ dipendente.cognome }}</td>
+            <td>{{ dipendente.ruolo }}</td>
+            <td>{{ dipendente.salario}}</td>
+        </tr>
+    </table>
+  
+  
+   
+
+    
+    
+    
+    
+    
+    
+   
+   
+   
+
+    </div>
+  <script src="appDipe.js"></script>
+  
+  </body>
+</html>

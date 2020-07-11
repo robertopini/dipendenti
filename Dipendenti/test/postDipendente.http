@@ -4,7 +4,7 @@ POST http://localhost:4004/dip/Dipendenti?
 Content-Type: application/json;IEEE754Compatible=true
 
 { 
-"ID":100, 
+"ID":7, 
 "nome":"Roberto", 
 "cognome":"Pini",
 "ruolo":"Operaio",
