@@ -23,9 +23,9 @@ this.before ('CREATE','Dipartimenti', async (req)=>{
 let respId = req.data.responsabile_ID
 let resp = await cds.read('Dipendenti').where({ID:respId})
 
-if (resp.ruolo != "Manager")
+if (resp[0].ruolo !== 'Manager')
 {
- req.reject(400, "Il responsabile del dipartimento deve essere un manager!")
+    req.reject(400, "Il responsabile del dipartimento deve essere un manager!")
 } 
 
 })

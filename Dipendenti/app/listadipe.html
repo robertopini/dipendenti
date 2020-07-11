@@ -33,8 +33,21 @@
         </tr>
     </table>
   
+    <br>
+<button onClick = avgSalary() type="button" class="btn btn-primary">Calcola salario medio</button>
+    </br>
   
-   
+<script>
+function avgSalary(){
+    axios.get('/dip/avgSalary()').
+    then( res => { 
+        alert("Il salario è " + parseInt(res.data.value) + " euro")     
+    }
+    )           
+}
+
+
+</script>
 
     
     

@@ -2,7 +2,7 @@ POST http://localhost:4004/dip/Dipartimenti?
 Content-Type: application/json;IEEE754Compatible=true
 
 { 
-"ID":7, 
-"nome":"Assemblaggio", 
-"responsabile_ID": 5
+"ID": 4,
+"nome": "Assemblaggio", 
+"responsabile_ID": 6
 }

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <title>Acme spa - Inserimento dipartimento</title>
+  </head>
+  <body>
+    <div class = "container">
+    <h1>Inserisci un nuov dipartimento</h1>
+    <p> Compila il form per inserire un nuovo dipartimento ! </br>
+       <form>
+  <div class="form-group">
+    <label for="idDipa">ID Dipartimento</label>
+    <input type="text" class="form-control" id="idDipa">
+  </div>
+   
+    <div class="form-group">
+  <label for="nomeDipa">Nome Dipartimento</label>
+    <input type="text" class="form-control" id="nomeDipa">
+ </div>
+  
+      <div class="form-group">
+  <label for="idRespDipa">ID Responsabile Dipartimento</label>
+    <input type="text" class="form-control" id="idRespDipa">
+ </div>
+  
+  
+  <button onClick = submitForm() type="button" class="btn btn-primary">Submit</button>
+</form>
+
+<script>
+function submitForm()
+{
+    let id = parseInt( document.getElementById("idDipa").value )
+    let nome = document.getElementById("nomeDipa").value
+    let id_Rep = parseInt(document.getElementById("idRespDipa").value )
+    
+    const POST = (cmd,data) => axios.post('/dip'+cmd,data)
+            POST(`/Dipartimenti`, { ID:id, nome: nome, responsabile_ID: id_Rep })
+             .then ( () => 
+             {
+             alert("OK, dipartimento inserito")
+              location.href = '/listaDipartimenti' 
+             }
+                    )
+             .catch ( e => alert("Error: " + e.response.data.error.message ))
+}
+
+</script>
+
+     
+  
+  
+   
+
+    
+    
+    
+    
+    
+    
+   
+   
+   
+
+    </div>
+   
+  
+  </body>
+</html>

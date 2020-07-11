@@ -47,7 +47,7 @@ module.exports = async (options) => {
     };
     app.get ('/listaDipendenti',(_,res) => res.sendFile('listadipe.html', opt));  
     app.get ('/listaDipartimenti',(_,res) => res.sendFile('listadipa.html', opt)); 
- 
+ app.get ('/insertDipartimento',(_,res) => res.sendFile('insertdipa.html', opt)); 
     //get Routes
     app.get('/insertDipendente',function (req, res) {
   res.send('Render insert dipendente');
